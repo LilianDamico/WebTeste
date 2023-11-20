@@ -6,18 +6,14 @@ public class Movimentation
 {
     public int MovId { get; set; }
 
-    [Required]
-    public List<MovimentationTypeEnum> MovimentationType { get; set; }
+    public List<MovimentationType> MovimentationType { get; set; }
 
-    [Required]
     public DateTime DataInicial { get; set; }
 
-    [Required]
     public DateTime DataFinal { get; set; }
 
-    [Required]
     public Movimentation()
     {
-        MovimentationType = new List<MovimentationTypeEnum>();
+        MovimentationType = new List<MovimentationType>();
     }
 }

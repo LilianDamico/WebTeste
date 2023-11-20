@@ -1,6 +1,6 @@
 ﻿using System;
 
-public enum MovimentationTypeEnum
+public enum MovimentationType
 {
     Receiving,
     GateIn,
