@@ -5,6 +5,15 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(Configuration.GetConnectionString("DefaulConnection")));
+
+    services.AddControllersWithViews();
+}
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
